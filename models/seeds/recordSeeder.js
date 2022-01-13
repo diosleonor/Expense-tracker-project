@@ -12,31 +12,6 @@ const SEED_RECORDS = require("../seedData.json").SEED_RECORDS
 db.once('open', () => {
 	bcrypt
 		.genSalt(10)
-		.then(salt => bcrypt.hash(SEED_USERS[0].password, salt))
-		.then(hash => User.create({
-			name: SEED_USERS[0].name,
-			email: SEED_USERS[0].email,
-			password: hash
-		}))
-		.then(user => {
-			const userId = user._id
-			const user1records = SEED_RECORDS.splice(3,1)
-			return Promise.all(Array.from(
-				user1records,
-				(_, i) => Record.create({
-					id: user1records[i].id,
-					name: user1records[i].name,
-					date: user1records[i].date,
-					amount: user1records[i].amount,
-					categoryId: user1records[i].categoryId,
-					userId
-				})
-				))
-		})
-		.catch(error => console.log(error))
-
-	bcrypt
-		.genSalt(10)
 		.then(salt => bcrypt.hash(SEED_USERS[1].password, salt))
 		.then(hash => User.create({
 			name: SEED_USERS[1].name,
@@ -45,15 +20,43 @@ db.once('open', () => {
 		}))
 		.then(user => {
 			const userId = user._id
-			const user2record = SEED_RECORDS.slice(3,4)
-			return Record.create({
-					id: user2records.id,
-					name: user2records.name,
-					date: user2records.date,
-					amount: user2records.amount,
-					categoryId: user2records.categoryId,
+			const user2records = SEED_RECORDS.splice(3,1)
+			return Promise.all(Array.from(
+				user2records,
+				(_, i) => Record.create({
+					id: user2records[i].id,
+					name: user2records[i].name,
+					date: user2records[i].date,
+					amount: user2records[i].amount,
+					categoryId: user2records[i].categoryId,
 					userId
 				})
+				))
+		})
+		.catch(error => console.log(error))
+
+	bcrypt
+		.genSalt(10)
+		.then(salt => bcrypt.hash(SEED_USERS[0].password, salt))
+		.then(hash => User.create({
+			name: SEED_USERS[0].name,
+			email: SEED_USERS[0].email,
+			password: hash
+		}))
+		.then(user => {
+			const userId = user._id
+			SEED_RECORDS.splice(3,0)
+			return Promise.all(Array.from(
+				SEED_RECORDS,
+				(_, i) => Record.create({
+					id: SEED_RECORDS[i].id,
+					name: SEED_RECORDS[i].name,
+					date: SEED_RECORDS[i].date,
+					amount: SEED_RECORDS[i].amount,
+					categoryId: SEED_RECORDS[i].categoryId,
+					userId
+				})
+				))
 		})
 		.then(() => {
 			console.log("Both users and records created.")
