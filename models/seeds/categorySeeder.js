@@ -9,4 +9,5 @@ db.once('open', async () => {
 	console.log('Mongodb connected.')
 	await Category.create(SEED_CATEGORIES)
 	console.log('Categories created.')
+	await process.exit()
 })
