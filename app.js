@@ -18,11 +18,8 @@ const Record = require('./models/Record')
 const Category = require('./models/Category')
 const User = require('./models/User')
 
-// // set template engine 'hbs' and extension file name as '.hbs'
-// app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
-
-// // turn on template engine 'hbs'
-// app.set('view engine', 'hbs')
+app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
+app.set('view engine', 'hbs')
 
 // // use express-session
 // app.use(session({
@@ -51,7 +48,7 @@ app.use(methodOverride('_method'))
 // 	next()
 // })
 // // use router to include routes
-// app.use(routes)
+app.use(routes)
 
 // listen to app
 app.listen(PORT, () => {
