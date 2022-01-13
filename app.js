@@ -14,7 +14,7 @@ const routes = require('./routes')
 require('./config/mongoose')
 
 // 暫存區
-const Record = require('./models/Record')
+const Record = require('./models/record')
 const Category = require('./models/Category')
 const User = require('./models/User')
 
