@@ -16,7 +16,7 @@ const recordSchema = new Schema({
 		required: true
 	},
 	categoryId:{
-		type: String, // 不確定是否要用Schema.Types.ObjectId
+		type: Number, // 不確定是否要用Schema.Types.ObjectId
 		required: true
 	},
 	date:{
