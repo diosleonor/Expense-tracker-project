@@ -14,8 +14,7 @@
 		<nav class="navbar navbar-dark bg-primary justify-content-between">
 			<a href="/" class="navbar-brand">
 				{{#if isAuthenticated}}
-				{{user.name}}的
-				{{/if}}記帳本
+				{{user.name}}的{{/if}}記帳本
 			</a>
 			{{#if isAuthenticated}}
 			<a href="/users/logout" class="btn btn-outline-light">Logout</a>
