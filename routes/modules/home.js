@@ -5,9 +5,9 @@ const Category = require('../../models/category')
 
 // index page
 router.get('/', async (req, res) => {
-	// const userId = req.user._id // req會帶一組user的資訊，指派一變數給它備用
+	const userId = req.user._id // req會帶一組user的資訊，指派一變數給它備用
 	// 查詢全部屬於userId的records
-	const records = await Record.find().lean().sort({_id:'asc'})
+	const records = await Record.find({userId}).lean().sort({_id:'asc'})
 	let totalAmount = 0
 	await Promise.all(
 		records.map( async (record) => {
