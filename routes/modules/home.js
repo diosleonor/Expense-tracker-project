@@ -24,3 +24,12 @@ router.get('/sort', (req, res) => {
 })
 
 module.exports = router
+
+// router.get('/', (req, res) => {
+// 	// const userId = req.user._id // req會帶一組user的資訊，指派一變數給它備用
+// 	Record.find() // 查詢全部屬於userId的records
+// 	.lean()
+// 	.sort({_id:'asc'})
+// 	.then(records => res.render('index', { records }))
+// 	.catch(error => console.error(error))
+// })
