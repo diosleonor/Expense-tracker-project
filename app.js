@@ -15,11 +15,6 @@ const routes = require('./routes')
 // const usePassport = require('./config/passport')
 require('./config/mongoose')
 
-// 暫存區
-const Record = require('./models/record')
-const Category = require('./models/category')
-const User = require('./models/User')
-
 app.engine('hbs', exphbs({ defaultLayout: 'main', helpers:'multihelpers', extname: '.hbs'}))
 app.set('view engine', 'hbs')
 
