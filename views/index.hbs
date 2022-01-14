@@ -12,9 +12,16 @@
 	                <option value="其他" {{#is sortInput 其他 }} selected {{/is}}>其他</option>
 	              </select>
 				</div>	
-				<div class="form-group">
-					<p>總金額 :{{this.amount}}</p>
-				</div>	
+				<div class="row">
+					<div class="col-auto mr-auto">
+						<p>總金額 : </p>				
+					</div>	
+					<div class="col-auto">
+						<h2 style="color: orange;">{{this.totalAmount}}</h2>
+					</div>
+				</div>
+				
+				
 			</form>
 			<ul class="list-group">
 				{{#each records}}
