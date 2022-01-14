@@ -2,6 +2,8 @@ const express = require('express')
 // const session = require('express-session')
 const app = express()
 const exphbs = require('express-handlebars')
+const hbshelpers = require('handlebars-helpers')
+const multihelpers = hbshelpers()
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 // const flash = require('connect-flash')
@@ -18,7 +20,7 @@ const Record = require('./models/record')
 const Category = require('./models/Category')
 const User = require('./models/User')
 
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
+app.engine('hbs', exphbs({ defaultLayout: 'main', helpers:'multihelpers', extname: '.hbs'}))
 app.set('view engine', 'hbs')
 
 // // use express-session

@@ -12,4 +12,15 @@ router.get('/', (req, res) => {
 	.catch(error => console.error(error))
 })
 
+// 待修
+router.get('/sort', (req, res) => {
+	const category = req.query.category
+ 	// const userId = req.user._id
+	Record.find({})
+		.lean()
+		.sort({category})
+		.then(records => res.render('index', {records, category}))
+		.catch(error => console.log(error))
+})
+
 module.exports = router
