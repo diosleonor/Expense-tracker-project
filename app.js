@@ -12,7 +12,7 @@ if(process.env.NODE_ENV !== 'production'){
 }
 const PORT = process.env.PORT
 const routes = require('./routes')
-// const usePassport = require('./config/passport')
+const usePassport = require('./config/passport')
 require('./config/mongoose')
 
 app.engine('hbs', exphbs({ defaultLayout: 'main', helpers:'multihelpers', extname: '.hbs'}))
@@ -31,8 +31,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // run every request in method override before going down
 app.use(methodOverride('_method'))
 
-// // call Passport function and send in app
-// usePassport(app)
+// call Passport function and send in app
+usePassport(app)
 // app.use(flash())
 // // switch nav bar expression accordingly
 // // 將req攜帶的狀態及資料傳送給res，才能在前端樣板使用
