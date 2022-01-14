@@ -1,5 +1,5 @@
 const express = require('express')
-// const session = require('express-session')
+const session = require('express-session')
 const app = express()
 const exphbs = require('express-handlebars')
 const hbshelpers = require('handlebars-helpers')
@@ -18,12 +18,12 @@ require('./config/mongoose')
 app.engine('hbs', exphbs({ defaultLayout: 'main', helpers:'multihelpers', extname: '.hbs'}))
 app.set('view engine', 'hbs')
 
-// // use express-session
-// app.use(session({
-// 	secret: process.env.SESSION_SECRET,
-// 	resave: false, 
-// 	saveUninitialized: true
-// }))
+// use express-session
+app.use(session({
+	secret: process.env.SESSION_SECRET,
+	resave: false, 
+	saveUninitialized: true
+}))
 
 // run every request in body parser before going down
 app.use(bodyParser.urlencoded({ extended: true }))
