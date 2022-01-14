@@ -13,7 +13,7 @@
 	              </select>
 				</div>	
 				<div class="form-group">
-					<p>總金額 :</p>
+					<p>總金額 :{{this.amount}}</p>
 				</div>	
 			</form>
 			<ul class="list-group">
@@ -21,7 +21,7 @@
 				<li class="list-group-item">
 					<div class='row'>
 						<div class="col-auto mr-auto">
-							<input style="vertical-align: middle;"type="checkbox" name="isDone" {{#if this.isDone }} checked {{/if}} disabled>
+							<i class="{{this.categoryId}}"></i>
 							<h5 style="display:inline; vertical-align: middle;">
 								{{this.name}}
 							</h5>
