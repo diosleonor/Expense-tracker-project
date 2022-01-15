@@ -39,27 +39,39 @@
   
   3. 安裝Node套件管理器(npm)
   <pre><code>npm install</code></pre>
+
+  4. 設定環境變數.env
+  <pre><code>將.env.example重新命名為.env</code></pre>
   
-  4. 用npm安裝種子資料
+  5. 用npm安裝種子資料
   <pre><code>npm run seed</code></pre>
 
-  5. 用npm啟動伺服器
+  6. 用npm啟動伺服器
   <pre><code>npm run dev</code></pre>
   或是
   <pre><code>npm run start</code></pre>
   
-  6. 開啟網頁瀏覽器並連結到此網址即可瀏覽本專案
+  7. 開啟網頁瀏覽器並連結到此網址即可瀏覽本專案
    <pre><code>http://localhost:3000</code></pre>
 <h3>開發工具及版本 (dev tools information)：</h3>
   Node.js v14.18.1<br> 
   Node Project Manager 8.1.0<br> 
-  Express v4.17.1<br>
+  Express v4.17.2<br>
   express-handlebars v5.3.4<br> 
-  body-parser v1.19.0<br>
+  express-session v1.17.2<br>
+  handlebars-helpers v0.9.8<br> 
+  body-parser v1.19.1<br>
+  method-override v3.0.0<br>
   Bootstrap v4.3.1<br> 
   jquery v3.3.1<br> 
   popper v2.9.1<br> 
   font-awesome v5.8.1<br> 
-  mongoose v6.0.12<br>
+  mongoose v6.1.6<br>
+  bcryptjs v2.4.3<br>
+  connect-flash v0.1.1<br>
+  dotenv v11.0.0<br>
+  passport v0.5.2<br>
+  passport-facebook v3.0.0<br>
+  passport-local v1.0.0<br>
 
 
