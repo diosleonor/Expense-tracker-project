@@ -24,12 +24,13 @@ router.get('/sort', async (req, res) => {
  	const userId = req.user._id
  	let totalAmount = 0
 	const records = await Record.find({userId, categoryId: category}).lean().sort({date:'desc'})
+	await Promise.all(
 	records.map(async (record) => {
 		totalAmount += record.amount
 		const category = await Category.findOne({id:record.categoryId})
 		record.categoryId = category.icon
 		return records
-	})
+	}))
 	res.render('index', {records, category, totalAmount})
 })
 
