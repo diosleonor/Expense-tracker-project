@@ -4,15 +4,15 @@
 
 <h3>功能描述 (features)：</h3>
     <h4>使用者要登入才能查看自己花了什麼錢</h4>
-    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-首頁.png" alt="Index"/></p>
+    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-登入.png" alt="Index"/></p>
     <h4>使用者可透過 Facebook Login 登入</h4>
     <h4>使用者可以註冊帳號，註冊的資料包括：名字、email、密碼、確認密碼。
-    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-註冊.png" alt="Register"/></p>
+    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-註冊.png" alt="Register"/></p>
     <h4>使用者也可以透過 Facebook Login 直接登入</h4>
     <h4>使用者登入後可以看到所有支出及支出總計並可以對支出進行簡單的操作：</h4>
-       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-瀏覽.png" alt="Read"/></p>
+       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-瀏覽.png" alt="Read"/></p>
     <h4>使用者可以新增支出：</h4>
-       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-新增.png" alt="New"/></p>
+       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-新增.png" alt="New"/></p>
     <h4>使用者可以刪除支出</h4>
     <h4>使用者可以修改支出：</h4>
        <ul> 
@@ -21,11 +21,11 @@
         <li>類別</li>
         <li>金額</li>
        </ul>
-       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-修改.png" alt="Edit"/></p>
+       <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-修改.png" alt="Edit"/></p>
     <h4>使用者可以透過類別來找到同一類型的支出</h4>
-    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-類別.png" alt="Sort"/></p>
+    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-類別.png" alt="Sort"/></p>
     <h4>使用完畢可以登出保護隱私</h4>
-    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A5-老爸的私房錢-登出.png" alt="Logout"/></p>
+    <p><img src="https://github.com/diosleonor/Expense-tracker-project/blob/main/pics/A3-老爸的私房錢-登出.png" alt="Logout"/></p>
 <h3>環境建置與需求 (prerequisites)：</h3>
   Node.js<br> 
   Terminal
