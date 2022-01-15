@@ -4,12 +4,12 @@
 				<div class="form-group">
 					<label for="sort">類別 :</label>
 					<select id="sort" class="form-control" name="category" onchange=";this.form.submit();">
-	                <option value="not-change">請選擇</option>
-	                <option value="1" {{#is sortInput 家居物業 }} selected {{/is}}>家居物業</option>
-	                <option value="2" {{#is sortInput 交通出行 }} selected {{/is}}>交通出行</option>
-	                <option value="3" {{#is sortInput 休閒娛樂 }} selected {{/is}}>休閒娛樂</option>
-	                <option value="4" {{#is sortInput 餐飲食品 }} selected {{/is}}>餐飲食品</option>
-	                <option value="5" {{#is sortInput 其他 }} selected {{/is}}>其他</option>
+	                <option value="0" {{#is category 0 }} selected {{/is}}>請選擇</option>
+	                <option value="1" {{#is category 1 }} selected {{/is}}>家居物業</option>
+	                <option value="2" {{#is category 2 }} selected {{/is}}>交通出行</option>
+	                <option value="3" {{#is category 3 }} selected {{/is}}>休閒娛樂</option>
+	                <option value="4" {{#is category 4 }} selected {{/is}}>餐飲食品</option>
+	                <option value="5" {{#is category 5 }} selected {{/is}}>其他</option>
 	              </select>
 				</div>	
 				<div class="row">

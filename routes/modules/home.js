@@ -3,11 +3,10 @@ const router = express.Router()
 const Record = require('../../models/record')
 const Category = require('../../models/category')
 
-// index page
+// index
 router.get('/', async (req, res) => {
 	const userId = req.user._id // req會帶一組user的資訊，指派一變數給它備用
-	// 查詢全部屬於userId的records
-	const records = await Record.find({userId}).lean().sort({_id:'asc'})
+	const records = await Record.find({userId}).lean().sort({date:'desc'})
 	let totalAmount = 0
 	await Promise.all(
 		records.map( async (record) => {
@@ -19,15 +18,19 @@ router.get('/', async (req, res) => {
 	res.render('index', { records, totalAmount })
 })
 
-// 待修
-router.get('/sort', (req, res) => {
+// sort
+router.get('/sort', async (req, res) => {
 	const category = req.query.category
- 	// const userId = req.user._id
-	Record.find({})
-		.lean()
-		.sort({category})
-		.then(records => res.render('index', {records, category}))
-		.catch(error => console.log(error))
+ 	const userId = req.user._id
+ 	let totalAmount = 0
+	const records = await Record.find({userId, categoryId: category}).lean().sort({date:'desc'})
+	records.map(async (record) => {
+		totalAmount += record.amount
+		const category = await Category.findOne({id:record.categoryId})
+		record.categoryId = category.icon
+		return records
+	})
+	res.render('index', {records, category, totalAmount})
 })
 
 module.exports = router
